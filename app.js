@@ -9,7 +9,7 @@ const taskRoutes = require("./routes/taskRoutes");
 const profileRoutes = require("./routes/profileRoutes");
 
 app.use(express.json());
-app.use(cors({origin:["http://localhost:3000", "https://mern-task-management.onrender.com"]}));
+app.use(cors({origin:["http://localhost:3000", "https://task-management-app.onrender.com"]}));
 
 
 mongoose.connect(process.env.MONGODB_URL).then(()=> console.log('database connected'))
@@ -32,7 +32,7 @@ app.get("*",(req,res)=>{
 
 
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 8081;
 app.listen(port, () => {
   console.log(`Backend is running on port ${port}`);
 });
